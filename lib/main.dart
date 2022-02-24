@@ -6,6 +6,7 @@ import 'package:training/utils/routes.dart';
 import 'screens/login_page.dart';
 import 'screens/home_page.dart';
 import 'screens/main_page.dart';
+import 'screens/Resume.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -27,6 +28,14 @@ class MyApp extends StatelessWidget {
         // MyRoutes.loginRoute: (context) => LoginPage(),
         MyRoutes.homeRoute: (context) => HomePage(),
         MyRoutes.mainRoute: (context) => MainPage(),
+        MyRoutes.ResumeRoute: (context) => ResumePage(
+              education: '',
+              experience: '',
+              email: '',
+              name: '',
+              reference: '',
+              skills: '',
+            ),
       },
     );
   }
