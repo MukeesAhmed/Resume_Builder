@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:training/screens/resumetwo.dart';
+import 'package:training/screens/template.dart';
 import 'package:training/utils/routes.dart';
 import 'screens/home_page.dart';
 import 'screens/main_page.dart';
@@ -27,7 +29,17 @@ class MyApp extends StatelessWidget {
         // MyRoutes.loginRoute: (context) => LoginPage(),
         MyRoutes.homeRoute: (context) => HomePage(),
         MyRoutes.mainRoute: (context) => MainPage(),
-        MyRoutes.ResumeRoute: (context) => ResumePage(
+        MyRoutes.ResumeoneRoute: (context) => ResumePage(
+              education: '',
+              experience: '',
+              email: '',
+              name: '',
+              reference: '',
+              skills: '',
+              contact: '',
+            ),
+        MyRoutes.myTemplatesRoute: (context) => my_templatesPage(),
+        MyRoutes.ResumetwoRoute: (context) => ResumetwoPage(
               education: '',
               experience: '',
               email: '',

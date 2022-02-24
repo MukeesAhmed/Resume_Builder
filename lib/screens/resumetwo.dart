@@ -2,8 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 // ignore: unused_import
 import 'package:training/screens/home_page.dart';
+import 'package:training/screens/template.dart';
 
-class ResumePage extends StatelessWidget {
+class ResumetwoPage extends StatelessWidget {
   final String name;
   final String email;
   final String experience;
@@ -13,7 +14,7 @@ class ResumePage extends StatelessWidget {
   final String contact;
 
   // ignore: use_key_in_widget_constructors
-  const ResumePage(
+  const ResumetwoPage(
       {required this.name,
       required this.email,
       required this.experience,
@@ -26,7 +27,7 @@ class ResumePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Resume Version 1.0"),
+          title: const Text("Resume Version 2.0"),
         ),
         resizeToAvoidBottomInset: false,
         body: SingleChildScrollView(
@@ -61,24 +62,6 @@ class ResumePage extends StatelessWidget {
                           height: 10,
                         ),
                         const ListTile(
-                            leading: Icon(CupertinoIcons.mail),
-                            title: Text(
-                              'Email',
-                              // textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                  decoration: TextDecoration.underline),
-                            )),
-                        Text(' $email', style: const TextStyle(fontSize: 12)),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        const Divider(color: Colors.black),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        const ListTile(
                             leading: Icon(CupertinoIcons.phone),
                             title: Text(
                               'Contact',
@@ -100,20 +83,16 @@ class ResumePage extends StatelessWidget {
                           height: 10,
                         ),
                         const ListTile(
-                            leading: Icon(CupertinoIcons.book),
+                            leading: Icon(CupertinoIcons.mail),
                             title: Text(
-                              'Education',
+                              'Email',
                               // textAlign: TextAlign.center,
                               style: TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                   decoration: TextDecoration.underline),
                             )),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        Text(' $education',
-                            style: const TextStyle(fontSize: 12)),
+                        Text(' $email', style: const TextStyle(fontSize: 12)),
                         const SizedBox(
                           height: 10,
                         ),
@@ -135,6 +114,28 @@ class ResumePage extends StatelessWidget {
                           height: 10,
                         ),
                         Text(' $experience',
+                            style: const TextStyle(fontSize: 12)),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        const Divider(color: Colors.black),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        const ListTile(
+                            leading: Icon(CupertinoIcons.book),
+                            title: Text(
+                              'Education',
+                              // textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  decoration: TextDecoration.underline),
+                            )),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Text(' $education',
                             style: const TextStyle(fontSize: 12)),
                         const SizedBox(
                           height: 10,

@@ -4,5 +4,8 @@ class MyRoutes {
   static String mainRoute = "/main";
   static String signupRoute = "/signup";
   // ignore: non_constant_identifier_names
-  static String ResumeRoute = "/resume";
+  static String ResumeoneRoute = "/resumeone";
+  // ignore: non_constant_identifier_names
+  static String ResumetwoRoute = "/resumetwo";
+  static String myTemplatesRoute = "/mytemplates";
 }

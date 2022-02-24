@@ -6,6 +6,7 @@ import 'package:get/get_navigation/src/routes/default_transitions.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:training/main.dart';
 import 'package:training/screens/main_page.dart';
+import 'package:training/screens/template.dart';
 import 'package:training/utils/routes.dart';
 import 'package:training/screens/Resume.dart';
 
@@ -43,19 +44,10 @@ class _HomePageState extends State<HomePage> {
 
   movetomainpage(BuildContext context) async {
     _formKey.currentState?.validate();
+    Navigator.pushNamed(context, MyRoutes.myTemplatesRoute);
     setState(() {
       changeButton = false;
     });
-
-    Navigator.of(context).push(MaterialPageRoute(
-        builder: (context) => ResumePage(
-            name: _name.text,
-            email: _email.text,
-            experience: _experience.text,
-            education: _education.text,
-            skills: _skills.text,
-            reference: _reference.text,
-            contact: _contact.text)));
   }
 
   @override
