@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 // ignore: unused_import
 import 'package:training/screens/home_page.dart';
-import 'package:training/screens/template.dart';
 
 class ResumetwoPage extends StatelessWidget {
   final String name;

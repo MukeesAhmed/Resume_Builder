@@ -25,7 +25,7 @@ class _MainPageState extends State<MainPage> {
           SizedBox(
             height: 20.0,
           ),
-          Text("Welcome to CV Builder",
+          Text("Welcome to Resume Builder",
               style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
           SizedBox(
             height: 20.0,

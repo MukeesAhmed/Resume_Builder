@@ -6,9 +6,9 @@ import 'package:get/get_navigation/src/routes/default_transitions.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:training/main.dart';
 import 'package:training/screens/main_page.dart';
-import 'package:training/screens/template.dart';
 import 'package:training/utils/routes.dart';
 import 'package:training/screens/Resume.dart';
+import 'package:training/screens/resumetwo.dart';
 
 // ignore: camel_case_types
 class listofvariables {
@@ -42,9 +42,35 @@ class _HomePageState extends State<HomePage> {
   bool changeButton = false;
   final _formKey = GlobalKey<FormState>();
 
-  movetomainpage(BuildContext context) async {
+  movetoresumeonepage(BuildContext context) async {
     _formKey.currentState?.validate();
-    Navigator.pushNamed(context, MyRoutes.myTemplatesRoute);
+
+    await Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => ResumePage(
+            name: _name.text,
+            email: _email.text,
+            experience: _experience.text,
+            education: _education.text,
+            skills: _skills.text,
+            reference: _reference.text,
+            contact: _contact.text)));
+    setState(() {
+      changeButton = false;
+    });
+  }
+
+  movetoresumetwopage(BuildContext context) async {
+    _formKey.currentState?.validate();
+
+    await Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => ResumetwoPage(
+            name: _name.text,
+            email: _email.text,
+            experience: _experience.text,
+            education: _education.text,
+            skills: _skills.text,
+            reference: _reference.text,
+            contact: _contact.text)));
     setState(() {
       changeButton = false;
     });
@@ -211,7 +237,7 @@ class _HomePageState extends State<HomePage> {
                         height: 20.0,
                       ),
                       InkWell(
-                        onTap: () => movetomainpage(context),
+                        onTap: () => movetoresumeonepage(context),
                         child: AnimatedContainer(
                           duration: const Duration(seconds: 3),
                           height: 50,
@@ -220,7 +246,32 @@ class _HomePageState extends State<HomePage> {
                           child: changeButton
                               ? const Icon(Icons.done, color: Colors.white)
                               : const Text(
-                                  "Submit",
+                                  "Template 1",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                      color: Colors.white),
+                                ),
+                          decoration: BoxDecoration(
+                              color: Colors.purple,
+                              borderRadius:
+                                  BorderRadius.circular(changeButton ? 50 : 8)),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20.0,
+                      ),
+                      InkWell(
+                        onTap: () => movetoresumetwopage(context),
+                        child: AnimatedContainer(
+                          duration: const Duration(seconds: 3),
+                          height: 50,
+                          width: changeButton ? 50 : 150,
+                          alignment: Alignment.center,
+                          child: changeButton
+                              ? const Icon(Icons.done, color: Colors.white)
+                              : const Text(
+                                  "Template 2",
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 18,
